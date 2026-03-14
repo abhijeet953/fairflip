@@ -1,19 +1,34 @@
 {
-  "name": "fairflip-monorepo",
-  "private": true,
-  "version": "0.1.1",
-  "description": "Monorepo for fairflip — cryptographically fair, verifiable coin flip library",
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "npm run build --workspaces",
-    "test": "npm run test --workspaces",
-    "lint": "npm run lint --workspaces"
+  "name": "fairflip",
+  "version": "0.1.2",
+  "description": "Cryptographically fair, verifiable coin flip - zero dependencies",
+  "type": "module",
+  "main": "./packages/core/dist/index.js",
+  "types": "./packages/core/dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./packages/core/dist/index.js",
+      "types": "./packages/core/dist/index.d.ts"
+    },
+    "./shim": {
+      "import": "./packages/core/dist/shim.js",
+      "types": "./packages/core/dist/shim.d.ts"
+    }
   },
-  "devDependencies": {
-    "typescript": "^5.4.5",
-    "vitest": "^1.6.0",
-    "@types/node": "^20.12.12"
+  "keywords": ["crypto", "random", "coin-flip", "fairness", "verifiable", "csprng", "commit-reveal"],
+  "license": "MIT",
+  "files": [
+    "packages/core/dist",
+    "README.md",
+    "MATH_PROOF.md",
+    "LICENSE",
+    "!packages/core/dist/index.test.js",
+    "!packages/core/dist/index.test.js.map",
+    "!packages/core/dist/index.test.d.ts",
+    "!packages/core/dist/index.test.d.ts.map"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhijeet953/fairflip.git"
   }
 }
