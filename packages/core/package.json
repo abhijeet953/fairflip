@@ -1,0 +1,35 @@
+{
+  "name": "fairflip",
+  "version": "0.1.0",
+  "description": "Cryptographically fair, verifiable coin flip — zero dependencies",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./shim": {
+      "import": "./dist/shim.js",
+      "require": "./dist/shim.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --reporter=verbose",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["crypto", "random", "coin-flip", "fairness", "verifiable", "csprng", "commit-reveal"],
+  "license": "MIT",
+  "files": ["dist", "README.md"],
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
+

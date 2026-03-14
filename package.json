@@ -1,0 +1,19 @@
+{
+  "name": "fairflip-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Monorepo for fairflip — cryptographically fair, verifiable coin flip library",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0",
+    "@types/node": "^20.12.12"
+  }
+}
