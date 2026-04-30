@@ -10,6 +10,8 @@ A cryptographically fair, verifiable coin flip library. Zero dependencies. Works
 
 `Math.random()` uses xorshift128+ — its internal state can be recovered from just 3 outputs, making all future values predictable. fairflip uses a SHA-256 commit-reveal scheme so neither party can manipulate the outcome, and anyone can independently verify every result.
 
+See [MATH_PROOF.md](./MATH_PROOF.md) for the formal proofs.
+
 ## Install
 
 ```bash
@@ -114,9 +116,9 @@ npx vitest run
 
 ## How it works
 
-Each flip generates a random server seed, commits to it via `SHA-256(seed)`, then combines it with a client nonce: `SHA-256(seed ‖ nonce)`. The result is derived from the LSB of that hash. The proof lets anyone verify the outcome without trusting the server.
+Each flip generates a random server seed, commits to it via `SHA-256(seed)`, then combines it with a client nonce: `SHA-256(seed ‖ nonce)`. The result is derived from the LSB of that hash. The proof lets anyone verify the outcome without trusting the server. 
 
-See `MATH_PROOF.md` for the formal proofs.
+See [MATH_PROOF.md](./MATH_PROOF.md) for the formal proofs.
 
 ## License
 
