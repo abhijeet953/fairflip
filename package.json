@@ -1,7 +1,7 @@
 {
   "name": "fairflip",
   "version": "0.1.2",
-  "description": "Cryptographically fair, verifiable coin flip - zero dependencies",
+  "description": "Cryptographically fair, verifiable coin flips. Zero dependencies. Works in Node.js, browsers, and Deno.",
   "type": "module",
   "main": "./packages/core/dist/index.js",
   "types": "./packages/core/dist/index.d.ts",
@@ -15,7 +15,11 @@
       "types": "./packages/core/dist/shim.d.ts"
     }
   },
-  "keywords": ["crypto", "random", "coin-flip", "fairness", "verifiable", "csprng", "commit-reveal"],
+  "keywords": [
+  "random", "cryptography", "verifiable", "commit-reveal",
+  "fairness", "csprng", "coin-flip", "prng", "sha256",
+  "games", "lottery", "randomness", "dice"
+],
   "license": "MIT",
   "files": [
     "packages/core/dist",
