@@ -1,6 +1,14 @@
 # fairflip
 
+![npm](https://img.shields.io/npm/v/fairflip)
+![npm downloads](https://img.shields.io/npm/dm/fairflip)
+![license](https://img.shields.io/npm/l/fairflip)
+
 A cryptographically fair, verifiable coin flip library. Zero dependencies. Works in Node.js, browsers, and Deno.
+
+## Why install ?
+
+`Math.random()` uses xorshift128+ — its internal state can be recovered from just 3 outputs, making all future values predictable. fairflip uses a SHA-256 commit-reveal scheme so neither party can manipulate the outcome, and anyone can independently verify every result.
 
 ## Install
 
