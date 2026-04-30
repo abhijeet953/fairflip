@@ -1,6 +1,6 @@
 {
   "name": "fairflip",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Cryptographically fair, verifiable coin flips. Zero dependencies. Works in Node.js, browsers, and Deno.",
   "type": "module",
   "main": "./packages/core/dist/index.js",
